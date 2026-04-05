@@ -5,7 +5,7 @@ to enable password --> vi /etc/ssh/sshd_congif          --> amzon-linux
 
                        systemctl restart ssh or sshd
 
-
+scp -i pemfile src-path user@ip:path
 jenkins:
 
     /var/lib/jenkins/
