@@ -9,3 +9,10 @@ jenkins directory structure
 
 run the same pipeline in two servers
 cron syntax
+
+
+
+env in jenkins
+BuildStatus
+BUILD_NUMBER
+JOB_NAME
