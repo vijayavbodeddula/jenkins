@@ -1,0 +1,4 @@
+   10  docker run -d --name con2 -p 81:8080 jenkins/jenkins:lts
+   11  docker exec -it con2 sh
+   12  docker exec -it con2 cat /var/jenkins_home/secrets/initialAdminPassword
+
