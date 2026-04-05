@@ -6,3 +6,5 @@ how you can manage jenkins credentials
 what you  can do if pipeline got failed
 jenkins default directory
 jenkins directory structure
+
+run the same pipeline in two servers

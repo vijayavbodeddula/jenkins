@@ -1,0 +1,16 @@
+linux
+-----
+to enable password --> vi /etc/ssh/sshd_congif          --> amzon-linux 
+                       vi /etc/ssh/sshd_congif.d/*.conf --> ubuntu server
+
+                       systemctl restart ssh or sshd
+
+
+jenkins:
+
+    /var/lib/jenkins/
+
+    tools
+    builds
+    logs
+    workspace
