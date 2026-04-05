@@ -8,6 +8,46 @@ jenkins default directory
 jenkins directory structure
 
 run the same pipeline in two servers
+    def runAllStages(serverName) {
+        stage('Stage 1') { sh "echo ${serverName} - Stage 1" }
+        stage('Stage 2') { sh "echo ${serverName} - Stage 2" }
+        stage('Stage 3') { sh "echo ${serverName} - Stage 3" }
+        stage('Stage 4') { sh "echo ${serverName} - Stage 4" }
+        stage('Stage 5') { sh "echo ${serverName} - Stage 5" }
+        stage('Stage 6') { sh "echo ${serverName} - Stage 6" }
+        stage('Stage 7') { sh "echo ${serverName} - Stage 7" }
+        stage('Stage 8') { sh "echo ${serverName} - Stage 8" }
+        stage('Stage 9') { sh "echo ${serverName} - Stage 9" }
+        stage('Stage 10') { sh "echo ${serverName} - Stage 10" }
+    }
+
+    pipeline {
+        agent none
+
+        stages {
+            parallel{
+                stage('Run on Server 1') {
+                    agent { label 'agent-1' }
+                    steps {
+                        script {
+                            runAllStages("Server1")
+                        }
+                    }
+                }
+
+                stage('Run on Server 2') {
+                    agent { label 'agent-2' }
+                    steps {
+                        script {
+                            runAllStages("Server2")
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
 cron syntax
 
 
